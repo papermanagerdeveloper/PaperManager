@@ -41,7 +41,7 @@ public class UploadHandleServlet extends HttpServlet
             for (FileItem item : list)
             {
                 //判断FileItem类对象封装的数据是一个普通文本表单字段，还是一个文件表单字段.
-                //如果是普通表单字段则返回true，否则返回false。
+                //如果是普通表单   字段则返回true，否则返回false。
                 if (item.isFormField())
                 {
                     String name = item.getFieldName();
@@ -78,6 +78,9 @@ public class UploadHandleServlet extends HttpServlet
                     in.close();
                     out.close();
                     item.delete();
+
+                    PrintWriter printWriter = response.getWriter();
+                    printWriter.println("上传成功");
                 }
             }
         } catch (Exception e)

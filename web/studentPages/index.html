@@ -1,13 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/bootstrap-4.3.1-dist/css/bootstrap.css">
-    <title>学生界面</title>
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="../bootstrap-4.3.1-dist/css/bootstrap.css">
+    <title>学生页面</title>
+    <style type="text/css">
+        .container{
+            width:1300px;
+            height:1300px;
+            width:100%;
+            text-align:center;
+        }
+        .nav-item{
+            background-color:#b9bbbe;
+            height:550px;
+            width:200px;
+            float:left;
+            text-align:center;
+            margin-left: 50px;
+        }
+        .function{
+            background-color:#e2e3e5;
+            height:550px;
+            width:525px;
+            float:left;
+            margin-right: 75px;
+        }
+        .notice{
+            background-color:#ebebeb;
+            height:550px;
+            width:432px;
+            float:left;
+            margin-right: 50px;
+        }
+        .footer{
+            text-align:center;
+        }
+
+    </style>
+    <style>
+        .btn_a{
+            background-color: #4e555b;
+            color: #fefefe;
+            display: block;
+            font-size: 16px;
+            height: 50px;
+            width: 125px;
+            text-align: center;
+            line-height: 50px;
+            text-decoration:none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 36px;
+            margin-top: 36px;
+        }
+        input{
+            border: 0 none;
+        }
+    </style>
+    <script type="text/javascript" src="../jquery-3.4.1.js">
+
+    </script>
+    <script type="text/javascript">
+        function blockselect(){
+            document.getElementById("submit").style.display="none";
+            document.getElementById("receive").style.display="none";
+            document.getElementById("application").style.display="none";
+            document.getElementById("select").style.display="block";
+        }
+        function blocksubmit(){
+            document.getElementById("select").style.display="none";
+            document.getElementById("receive").style.display="none";
+            document.getElementById("application").style.display="none";
+            document.getElementById("submit").style.display="block";
+        }
+        function blockreceive(){
+            document.getElementById("select").style.display="none";
+            document.getElementById("submit").style.display="none";
+            document.getElementById("application").style.display="none";
+            document.getElementById("receive").style.display="block";
+        }
+        function blockapplication(){
+            document.getElementById("select").style.display="none";
+            document.getElementById("submit").style.display="none";
+            document.getElementById("receive").style.display="none";
+            document.getElementById("application").style.display="block";
+        }
+    </script>
+
+    <!-- <script type="text/javascript">
+
+         $(function(){
+
+             /* 点击事件会在超链接跳转前发生 */
+
+             $("#show a").click(function(){
+                 var link = $(this).attr('href');
+                 $('show').attr('src', link);
+                 var href = window.location.href;
+                 window.location.href = href.substr(0, href.indexOf('#')) + '#' + link;
+                 return false;
+             });
+         });
+
+     </script>-->
 </head>
-<body>
-<ul>
-    <li><a href="uploadReport.html">上传论文</a></li>
-</ul>
+<body background="bgpicture.jpg" link="#f0f8ff">
+
+<div class="container">
+
+    <h1 >学生版</h1>
+    <hr size="3" noshade>
+
+    <div class="nav-item">
+        <p><a class="btn_a" href="#" onclick="blockselect();return false;">选题</a></p>
+        <p><a class="btn_a" href="#" onclick="blocksubmit();return false;">提交报告</a></p>
+        <p><a class="btn_a" href="#" onclick="blockreceive();return false;">接收消息</a></p>
+        <p><a class="btn_a" href="#" onclick="blockapplication();return false;">申请重新开题</a></p>
+    </div>
+    <div class="function">
+        <div id="select" name="select" style="display: none">
+            <br>
+            选题
+        </div>
+
+        <div id="submit" name="submit" style="display:none">
+            <br>
+            提交报告
+            <form action="../UploadHandleServlet" enctype="multipart/form-data" method="post">
+                <input type="file" name="files">
+                <input type="submit" class="btu btn-secondary" value="提交">
+            </form>
+
+        </div>
+
+        <div id="receive" name="receive" style="display: none">
+            接收消息
+        </div>
+
+        <div id="application" name="application" style="display: none">
+            重新开题申请
+        </div>
+    </div>
+    <div class="notice">
+        公告
+    </div>
+
+    <div class="footer">
+        <hr size="3" noshade>
+        版权 © 软工第九小组
+    </div>
+
+</div>
 </body>
 </html>

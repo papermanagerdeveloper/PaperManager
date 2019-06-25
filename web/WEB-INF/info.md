@@ -4,7 +4,7 @@ session中保存有user对象，存有ID，userType。
 # 数据库（全部属性默认非空）
 ### 学生信息
 ```
-sex: F M
+sex: F M****
 schedule: chooseTile taskPlan midtermReport finalReport  
 titleID: 默认每个学生初始选题ID为00000  
 ```
