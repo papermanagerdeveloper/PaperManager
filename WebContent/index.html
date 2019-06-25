@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.css">
+    <title>登录</title>
+</head>
+<body data-gr-c-s-loaded="true">
+<div class="container">
+    <form class="form-signin" action="AuthenticationServlet" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label  class="sr-only">ID</label>
+        <input type="text" class="form-control" placeholder="ID" required="" autofocus="" name="ID">
+        <label  class="sr-only">Password</label>
+        <input type="password"class="form-control" placeholder="Password" required="" name="password">
+        <div class="checkbox">
+            <input type="radio" name="userType" value="student" />学生
+            <input type="radio" name="userType" value="teacher" />教师
+            <input type="radio" name="userType" value="administrator" />管理员
+        </div>
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="登录" />
+        <a class="btn btn-lg btn-primary btn-block" href="register.html">注册</a>
+    </form>
+</div> <!-- /container -->
+
+</body>
+</html>
