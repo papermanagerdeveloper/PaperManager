@@ -7,23 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaf2095d-318a-4cd9-b18c-ef8a494b227b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/DownloadHandleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DownloadHandleServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UploadHandleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UploadHandleServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beans/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beans/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beans/Titles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/Titles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/beans/UpdateSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/beans/UpdateSchedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/studentPages/grade/gradeQuery.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/studentPages/grade/gradeQuery.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/studentPages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/studentPages/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/studentPages/title/titleChoice.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/studentPages/title/titleChoice.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/studentPages/title/titleChoiceSubmit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/studentPages/title/titleChoiceSubmit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/studentPages/uploadReport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/studentPages/uploadReport.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/teacherPages/downloadReport.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/teacherPages/downloadReport.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/teacherPages/grade/gradeUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/teacherPages/grade/gradeUpdate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/teacherPages/grade/gradeUpdateSubmit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/teacherPages/grade/gradeUpdateSubmit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/teacherPages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/teacherPages/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/teacherPages/title/titleAddSubmit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/teacherPages/title/titleAddSubmit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +51,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/teacherPages/downloadReport.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
@@ -102,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DownloadHandleServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="319">
+              <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -440,28 +424,28 @@
       <workItem from="1561366208167" duration="937000" />
       <workItem from="1561422405671" duration="5479000" />
       <workItem from="1561441352428" duration="10317000" />
-      <workItem from="1561459220208" duration="7760000" />
+      <workItem from="1561459220208" duration="8390000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54090000" />
+    <option name="totallyTimeSpent" value="54720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.81672025" visible="true" weight="0.14621131" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.8176915" visible="true" weight="0.14621131" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.18327974" side_tool="true" visible="true" weight="0.14621131" />
+      <window_info id="Web" order="7" sideWeight="0.18230852" side_tool="true" visible="true" weight="0.14621131" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32901832" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32901832" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32901832" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -650,13 +634,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DownloadHandleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/beans/Titles.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1308">
@@ -710,6 +687,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="51" column="17" lean-forward="true" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DownloadHandleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
         </state>
       </provider>
     </entry>
