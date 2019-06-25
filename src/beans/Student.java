@@ -12,8 +12,6 @@ public class Student {
 	String titleID;
 	/*测试代码*/
 	public static void main(String[] args) {
-		List list = Student.getStudentByTeacherID("190601");
-		System.out.print(list.get(0).toString());
 	}
 	
 	/*构造函数*/
@@ -21,8 +19,19 @@ public class Student {
 		setId(id);
 		queryAll();
 	}
-	/*根据学生的指导老师的ID来查询学生信息*/
-	public static ArrayList getStudentByTeacherID(String teacherID) {
+	public Student() {
+	}
+	/*根据学生的指导老师的ID来查询学生信息，静态方法*/
+	public static ArrayList getStudentByTeacherID_s(String teacherID) {
+		String sql = "select * from studentInfo where teacherID=?";
+		String[] params = {teacherID};
+		DBUtil dbutil = new DBUtil();
+
+		ArrayList list = (ArrayList)dbutil.getList(sql, params);
+		return list;
+	}
+	/*根据学生的指导老师的ID来查询学生信息,普通方法*/
+	public ArrayList getStudentByTeacherID(String teacherID) {
 		String sql = "select * from studentInfo where teacherID=?";
 		String[] params = {teacherID};
 		DBUtil dbutil = new DBUtil();

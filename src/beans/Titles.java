@@ -10,6 +10,8 @@ public class Titles {
 	 * 数组tr，保存  生成表格的  html代码中的  固定部分。
 	 */
 	protected String[] tr;
+	/**/
+	protected static Integer titleID = 19901;
 	public Titles() {
 		/*给成员变量tr数组赋值*/
 		tr = new String[6];
@@ -54,7 +56,7 @@ public class Titles {
 		Map student = dbUtil.getMap(studentQuerySql, params3);
 		String titleIdFromStudentTable = (String)student.get("titleID");
 		/*只有在题目没有被其他学生选择以及本学生之前没有选过课的情况下，才更新数据库*/
-		if(list.isEmpty()||!titleIdFromStudentTable.equals("0")) {
+		if(list.isEmpty()||!titleIdFromStudentTable.equals("00000")) {
 			 return 0;
 		}else {
 			 dbUtil.update(titleUpdateSql, params1);
@@ -62,16 +64,41 @@ public class Titles {
 			 return 1;
 		}
 	}
-	/* 教师添加题目*/
-	public static int titleAdd(String caption,String type,String introduction) {
-		/*String sql = "update grade set grade=? where ID=?";
-		String[] params = {grade,ID};
+	/* 教师添加题目，静态方法*/
+	public static int titleAdd_s(String teacherID,String caption,String type,String introduction) {
+		String titleAddSql = "insert into title values(?,?,?,?,?)";
+		
+		String ID = String.valueOf(Titles.titleID++);
+		String[] params = {ID,caption,introduction,type,"F"};
+		
 		DBUtil dbutil = new DBUtil();
-		int result = dbutil.update(sql, params);*/
-		return 1;
+		
+		int result = dbutil.update(titleAddSql, params);
+		return result;
 	}
-	/*根据题目ID查询题目信息*/
-	public static Map titleQuery(String titleID) {
+	/* 教师添加题目，普通方法*/
+	public int titleAdd(String teacherID,String caption,String type,String introduction) {
+		String titleAddSql = "insert into title values(?,?,?,?,?)";
+		
+		String ID = String.valueOf(Titles.titleID++);
+		String[] params = {ID,caption,introduction,type,"F"};
+		
+		DBUtil dbutil = new DBUtil();
+		
+		int result = dbutil.update(titleAddSql, params);
+		return result;
+	}
+	/*根据题目ID查询题目信息，静态方法*/
+	public static Map titleQuery_s(String titleID) {
+		DBUtil dbutil = new DBUtil();
+		String 	sql = "select * from title where ID=?";
+		String[] params = {titleID};
+		
+		Map map = dbutil.getMap(sql, params);
+		return map;
+	}
+	/*根据题目ID查询题目信息，普通方法*/
+	public Map titleQuery(String titleID) {
 		DBUtil dbutil = new DBUtil();
 		String 	sql = "select * from title where ID=?";
 		String[] params = {titleID};

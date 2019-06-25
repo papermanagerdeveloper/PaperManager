@@ -1,4 +1,5 @@
 import beans.DBUtil;
+import beans.UpdateSchedule;
 import beans.User;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -18,16 +19,19 @@ import java.util.Map;
 @WebServlet(name = "UploadHandleServlet")
 public class UploadHandleServlet extends HttpServlet
 {
-    public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    public void service(HttpServletRequest request, HttpServletResponse response) throws  IOException
     {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
+        response.setCharacterEncoding("UTF-8");
+        response.setHeader("Content-type", "text/html;charset=UTF-8");
         try
         {
             DiskFileItemFactory factory = new DiskFileItemFactory();
             ServletFileUpload upload = new ServletFileUpload(factory);
             upload.setFileSizeMax(10000000);
             upload.setHeaderEncoding("UTF-8");
+
 
             //判断请求消息中的内容是否是“multipart/form-data”类型,不是则为false.
             if (!ServletFileUpload.isMultipartContent(request))
@@ -79,6 +83,8 @@ public class UploadHandleServlet extends HttpServlet
                     out.close();
                     item.delete();
 
+                    UpdateSchedule updateSchedule = new UpdateSchedule(user.getID());
+                    updateSchedule.toNextSchedule();
                     PrintWriter printWriter = response.getWriter();
                     printWriter.println("上传成功");
                 }

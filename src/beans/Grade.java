@@ -14,14 +14,25 @@ public class Grade {
 		setId(id);
 		queryAll();
 	}
-	/*教师端更新成绩*/
-	public static int gradeUpdate(String ID,String grade) {
+	public Grade() {
+
+	}
+	/*教师端更新成绩,静态方法*/
+	public static int gradeUpdate_s(String ID,String grade) {
 		String sql = "update grade set grade=? where ID=?";
 		String[] params = {grade,ID};
 		DBUtil dbutil = new DBUtil();
 		int result = dbutil.update(sql, params);
 		return result;
 	}
+	/*教师端更新成绩，普通方法*/
+	public int gradeUpdate(String ID,String grade) {
+		String sql = "update grade set grade=? where ID=?";
+		String[] params = {grade,ID};
+		DBUtil dbutil = new DBUtil();
+		int result = dbutil.update(sql, params);
+		return result;
+	} 
 	public void setId(String id) {
 		this.id = id;
 	}
